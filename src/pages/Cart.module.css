@@ -1,0 +1,44 @@
+.cart {
+  position: absolute;
+  display: flex;
+  top: 5rem;
+  /* display: none; */
+  background-color: red;
+  animation: tran 0.5s ease-in-out;
+  width: 25rem;
+  min-height: 100vh;
+  max-height: auto;
+
+  z-index: 1;
+}
+.dis {
+  position: fixed;
+  display: flex;
+  flex-direction: end;
+  justify-content: end;
+  width: 100%;
+  z-index: 1;
+}
+
+@keyframes tran {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 25rem;
+  }
+}
+
+.i {
+  height: 30rem;
+  overflow-y: scroll;
+}
+
+.i li {
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #535252;
+}

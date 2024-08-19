@@ -1,0 +1,32 @@
+
+.img {
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    align-items:center;
+    place-content:center;
+    justify-content:center;
+}
+.all{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    backGround-color:#fff
+}
+.container{
+    display:flex;
+    place-content:center;
+    align-items:center;
+}
+.all img{
+    height:50%;
+    width:75%
+}
+h3{
+    font-family:'Poppins'
+}
+.itmes{
+    display:flex;
+    flex-direction:row;
+    gap:60px
+}

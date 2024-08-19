@@ -1,0 +1,39 @@
+.des {
+  display: flex;
+
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.des img {
+  width: 100%;
+}
+
+.des li {
+  background-color: #e4e0e0;
+}
+.new {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+select {
+  padding: 10px 70px;
+  text-align: center;
+  border: 0.5px #a5a4a4 solid;
+}
+.pda {
+  padding: 10px;
+}
+
+.pr {
+  padding: 40px;
+}
+strong {
+  padding: 10px;
+  margin-bottom: 10px;
+}

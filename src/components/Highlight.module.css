@@ -1,0 +1,10 @@
+.full {
+  background-color: #fff;
+}
+.listing {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-evenly;
+  padding: 20px;
+}
