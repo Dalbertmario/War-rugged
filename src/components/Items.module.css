@@ -20,6 +20,10 @@
   margin-top: 5rem;
 }
 
+.ls {
+  cursor: pointer;
+}
+
 .all {
   display: flex;
   flex-direction: row;

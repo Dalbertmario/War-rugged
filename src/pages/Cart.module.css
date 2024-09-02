@@ -1,15 +1,34 @@
 .cart {
   position: absolute;
   display: flex;
-  top: 5rem;
+  top: 1rem;
   /* display: none; */
   background-color: red;
-  animation: tran 0.5s ease-in-out;
+  animation: tranOpen 0.5s ease-in;
+  /* animation: tansOut 0.5s ease-out; */
   width: 25rem;
   min-height: 100vh;
   max-height: auto;
-
   z-index: 1;
+}
+@keyframes tansOut {
+  form {
+    width: 25rem;
+  }
+  to {
+    width: 0rem;
+  }
+}
+@keyframes tranOpen {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 25rem;
+  }
+}
+.carting {
+  animation: tansOut 0.5s ease-in-out;
 }
 .dis {
   position: fixed;
@@ -17,16 +36,7 @@
   flex-direction: end;
   justify-content: end;
   width: 100%;
-  z-index: 1;
-}
-
-@keyframes tran {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 25rem;
-  }
+  z-index: 2;
 }
 
 .i {
@@ -37,8 +47,10 @@
 .i li {
   display: grid;
   list-style: none;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 0.5fr;
+
   gap: 10px;
   align-items: center;
   border-bottom: 1px solid #535252;
+  z-index: 1;
 }

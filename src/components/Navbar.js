@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./NavBar.module.css";
+import { useData } from "../contexts/ContextProvider";
 function Navbar({ car }) {
+  const { sidepanel, dispatch } = useData();
+
   return (
     <div className={styles.nav}>
       <div className={styles.logo}>
         <h3>War & Rugged</h3>
-        <span></span>
       </div>
 
       <div className={styles.list}>
@@ -38,7 +40,7 @@ function Navbar({ car }) {
         </ul>
         <ul>
           <li>
-            <NavLink onClick={() => car((el) => !el)} to="cart">
+            <NavLink onClick={() => dispatch({ type: "sidepanel" })} to="cart">
               cart
             </NavLink>
           </li>

@@ -1,14 +1,25 @@
-import { useEffect, useState } from "react";
 import styles from "./Cart.module.css";
-function Cart({ cart, item }) {
+import { useData } from "../contexts/ContextProvider";
+import { useEffect } from "react";
+function Cart() {
+  const { sidepanel, cartt, dispatch } = useData();
+  useEffect(
+    function () {
+      dispatch({ type: "sidepanel" });
+    },
+    [cartt, dispatch]
+  );
   return (
     <div className={styles.dis}>
-      <div className={cart && styles.cart}>
-        {cart && (
+      <div className={`${sidepanel ? styles.cart : styles.carting}`}>
+        {sidepanel && (
           <div className={styles.i}>
+            <button onClick={() => dispatch({ type: "sidepanel/close" })}>
+              &#x274C;
+            </button>
             <h2>Items In Your Cart</h2>
             <ul>
-              {item.map((el) => (
+              {cartt.map((el) => (
                 <li key={el.name}>
                   <div>
                     <img src={`${el.img}`} alt="proimg" />
@@ -17,6 +28,13 @@ function Cart({ cart, item }) {
                     <h3>{el.name}</h3>
                   </div>
                   <div>{el.price}</div>
+                  <button
+                    onClick={() =>
+                      dispatch({ type: "cart/remove", payload: el })
+                    }
+                  >
+                    &#x274C;
+                  </button>
                 </li>
               ))}
             </ul>

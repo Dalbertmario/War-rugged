@@ -1,17 +1,9 @@
-import { useState, useReducer } from "react";
 import style from "./BikeDisplay.module.css";
 import { Link } from "react-router-dom";
-
-const data = [
-  { name: "Interceptor 650", year: 2034, img: "/interceptor.jpg", ind: 1 },
-  { name: "Continetal GT650", year: 2024, img: "/gt650.jpg" },
-  { name: "Duke 390", img: "duke.jpg" },
-  { name: "aprila", img: "aprila.jpg" },
-  { name: "ducati", img: "ducati.jpg" },
-  { name: "harley", img: "harley.jpg" },
-];
+import { useData } from "../contexts/ContextProvider";
 
 function BikeDisplay() {
+  const { data } = useData();
   return (
     <div className={style.edit}>
       <h1>Seacrh By Bike</h1>

@@ -1,5 +1,7 @@
+import { useData } from "../contexts/ContextProvider";
 import styles from "./Recommendation.module.css";
-function Recommendation({ dispatch }) {
+function Recommendation() {
+  const { dispatch } = useData();
   const recommedn = [
     {
       name: "Royal Enfield Classic 350 -120 Year limited edition",
