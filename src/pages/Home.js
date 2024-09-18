@@ -8,8 +8,6 @@ import { Outlet } from "react-router-dom";
 function Home({ cart, dispatch }) {
   return (
     <div>
-      <Navbar />
-      <Outlet />
       <SlidingImg />
       <BikeDisplay />
       <Highlight />

@@ -38,13 +38,9 @@ function Navbar({ car }) {
             <NavLink to="/shop">Shop All</NavLink>
           </li>
         </ul>
-        <ul>
-          <li>
-            <NavLink onClick={() => dispatch({ type: "sidepanel" })} to="cart">
-              cart
-            </NavLink>
-          </li>
-        </ul>
+        <li>
+          <h4 onClick={() => dispatch({ type: "sidepanel" })}>cart</h4>
+        </li>
       </div>
     </div>
   );

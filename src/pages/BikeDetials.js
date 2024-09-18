@@ -13,7 +13,7 @@ function BikeDetials() {
 
   return (
     <div className={styles.all}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles.container}>
         <div className={styles.img}>
           <img src={d} alt="curretName" />

@@ -4,7 +4,7 @@ import styles from "./Glove.module.css";
 function Glove() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles.glove}>
         <h1>Glove</h1>
         <img src="/gloves.jpg"></img>

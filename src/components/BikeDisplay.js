@@ -1,8 +1,9 @@
 import style from "./BikeDisplay.module.css";
 import { Link } from "react-router-dom";
 import { useData } from "../contexts/ContextProvider";
-
+import { useSelector } from "react-redux";
 function BikeDisplay() {
+  // const { data } = useData();
   const { data } = useData();
   return (
     <div className={style.edit}>

@@ -1,7 +1,8 @@
 import { useData } from "../contexts/ContextProvider";
 import styles from "./Recommendation.module.css";
+import { useDispatch } from "react-redux";
+import { add } from "../contexts/Accountslice";
 function Recommendation() {
-  const { dispatch } = useData();
   const recommedn = [
     {
       name: "Royal Enfield Classic 350 -120 Year limited edition",
@@ -22,7 +23,7 @@ function Recommendation() {
       option: ["Crazy Black", "Bum"],
     },
   ];
-
+  const dispatching = useDispatch();
   return (
     <div className={styles.pr}>
       <h1>Recommendation</h1>
@@ -41,7 +42,7 @@ function Recommendation() {
                   </select>
                 </div>
                 <strong>Rs{el.price}.00</strong>
-                <button onClick={() => dispatch({ type: "add", payload: el })}>
+                <button onClick={() => dispatching(add(el))}>
                   Add-To-Cart
                 </button>
               </div>

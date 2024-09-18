@@ -1,18 +1,28 @@
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import styles from "./SlidingImg.module.css";
+
 function SlidingImg() {
-  const img = [
-    "../Others/seat.jpg",
-    "../Others/seat-half.jpg",
-    "../Others/seat.jpg",
-  ];
+  const img = useMemo(function () {
+    return [
+      "../Others/seat.jpg",
+      "../Others/seat-half.jpg",
+      "../Others/seat.jpg",
+    ];
+  }, []);
+
   const [increment, setImcement] = useState(0);
   function handelleft() {
-    setImcement((el) => el + 1);
+    if (increment <= 2) {
+      setImcement((el) => el + 1);
+    }
   }
   function handelright() {
-    if (increment >= 0) setImcement((el) => el - 1);
+    increment >= 1 && setImcement((el) => el - 1);
   }
+  console.log(increment);
+
+ 
+
   return (
     <section className={styles.container}>
       <div className={styles.sliderWrapper}>

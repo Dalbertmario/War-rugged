@@ -48,7 +48,6 @@ const data = [
 ];
 function Items({ names, ref }) {
   const datas = data.filter((el) => el.name === names);
-  console.log(datas.map((el) => el.tankpad));
   return (
     <div id="page1" className={styles.kind} ref={ref}>
       <div className={styles.widthc}>
